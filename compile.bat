@@ -1,0 +1,2 @@
+cargo +nightly build -Z build-std=core --target avr-atmega328p.json --release
+avrdude -patmega328p -carduino -P %1 -b115200 -D -Uflash:w:target/avr-atmega328p/release/blink.elf:e -C C:\Users\owner\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17\etc\avrdude.conf
